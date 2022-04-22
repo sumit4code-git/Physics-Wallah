@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/margin"
+    app:cardElevation="@dimen/elevation"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding_shimmer">
+
+        <TextView
+            android:id="@+id/tv_teacher_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_shimmer"
+            android:layout_marginBottom="@dimen/elevation"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Event Name 2" />
+
+        <LinearLayout
+            android:id="@+id/ll_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_teacher_name"
+            android:layout_alignParentLeft="true"
+            android:layout_toStartOf="@+id/iv_teacher_img_container"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="3"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:text="Public" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_view_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_place"
+            android:layout_marginTop="@dimen/padding_shimmer"
+            android:layout_marginBottom="@dimen/padding_shimmer"
+            android:backgroundTint="@color/blue"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:cornerRadius="@dimen/margin"
+            tools:text="@string/view_more" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/iv_teacher_img_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/padding_shimmer"
+            app:cardCornerRadius="@dimen/img_corner"
+            android:elevation="@dimen/elevation"
+            android:layout_alignTop="@id/tv_teacher_name"
+            android:layout_alignBottom="@id/btn_view_more">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_teacher"
+                android:layout_width="@dimen/img_height"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

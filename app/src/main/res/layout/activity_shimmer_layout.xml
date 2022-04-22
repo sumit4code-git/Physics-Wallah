@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardMaxElevation="4dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_shimmer"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_event_image">
+
+            <View
+                android:layout_width="@dimen/shimmer_heading_width_small"
+                android:layout_height="@dimen/shimmer_text_height"
+                android:layout_marginLeft="@dimen/padding_shimmer"
+                android:background="@color/background" />
+
+            <View
+                android:layout_width="@dimen/shimmer_activity_sub_content"
+                android:layout_height="@dimen/shimmer_text_height"
+                android:layout_marginLeft="@dimen/padding_shimmer"
+                android:layout_marginTop="@dimen/padding_shimmer"
+                android:background="@color/background" />
+
+            <Button
+                android:id="@+id/btn_free"
+                android:layout_width="@dimen/shimmer_chips_width"
+                android:layout_height="@dimen/shimmer_chips_height"
+                android:layout_below="@+id/et_query_container"
+                android:layout_toEndOf="@+id/btn_distance"
+                android:layout_marginTop="@dimen/padding_shimmer"
+                android:layout_marginLeft="@dimen/padding_shimmer"
+                app:backgroundTint="@color/background"
+                app:cornerRadius="55dp" />
+
+        </LinearLayout>
+        <View
+            android:id="@+id/iv_event_image"
+            android:layout_width="@dimen/placeholderImage"
+            android:layout_height="@dimen/placeholderImage"
+            android:background="@color/background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
