@@ -18,4 +18,6 @@
     <dimen name="margin">20dp</dimen>
     <dimen name="elevation">8dp</dimen>
     <dimen name="img_corner">15dp</dimen>
+    <dimen name="card_corner">12dp</dimen>
+    <dimen name="card_elevation">4dp</dimen>
 </resources>

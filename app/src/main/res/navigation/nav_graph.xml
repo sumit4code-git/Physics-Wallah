@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/teachersDetailsFragment"
-        android:name="com.example.physicswallah.TeachersDetailsFragment"
+        android:name="com.example.physicswallah.fragments.TeachersDetailsFragment"
         android:label="fragment_teachers_details"
         tools:layout="@layout/fragment_teachers_details" />
 </navigation>

@@ -1,15 +1,14 @@
-package com.example.physicswallah
+package com.example.physicswallah.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.activityViewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.physicswallah.R
 import com.example.physicswallah.adapter.TeachersAdapter
 import com.example.physicswallah.databinding.FragmentTeachersDetailsBinding
 import com.example.physicswallah.model.UsersResponseItem
@@ -40,7 +39,6 @@ class TeachersDetailsFragment : Fragment(R.layout.fragment_teachers_details) {
     }
 
     private fun callListeners() {
-
         viewModel.userDetailsLiveData.observe(viewLifecycleOwner) {
             it?.let { it ->
                 list=it
@@ -68,8 +66,6 @@ class TeachersDetailsFragment : Fragment(R.layout.fragment_teachers_details) {
             }
 
         }
-
-
     }
 
     private fun initComponents() {
